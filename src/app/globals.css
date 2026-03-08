@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #111111; /* Matching the dark edges of the images */
+    --foreground: #f4f4f4;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  overflow-x: hidden;
+  font-family: var(--font-outfit), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hide scrollbar for cleaner look */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Custom selection */
+::selection {
+  background: rgba(212, 163, 115, 0.3); /* Primary color low opacity */
+  color: white;
+}
